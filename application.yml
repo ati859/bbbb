@@ -1,0 +1,100 @@
+lavalink:
+    server:
+        bufferDurationMs: 400
+        filters:
+            channelMix: true
+            distortion: true
+            equalizer: true
+            karaoke: true
+            lowPass: true
+            rotation: true
+            timescale: true
+            tremolo: true
+            vibrato: true
+            volume: true
+        frameBufferDurationMs: 5000
+        gcWarnings: true
+        opusEncodingQuality: 10
+        password: yourpasswordhere
+        playerUpdateInterval: 5
+        resamplingQuality: HIGH
+        soundcloudSearchEnabled: true
+        sources:
+            bandcamp: true
+            http: true
+            local: false
+            nico: true
+            soundcloud: true
+            twitch: true
+            vimeo: true
+            youtube: false
+        trackStuckThresholdMs: 10000
+        useSeekGhosting: true
+        youtubePlaylistLoadLimit: 6
+        youtubeSearchEnabled: true
+lavasrc:
+    applemusic:
+        albumLoadLimit: 6
+        countryCode: US
+        mediaAPIToken: REDACTED
+        playlistLoadLimit: 6
+    flowerytts:
+        audioFormat: mp3
+        silence: 0
+        speed: 1
+        translate: false
+        voice: default voice
+    providers:
+        - spsearch:%QUERY%
+        - ytmsearch:"%ISRC%"
+        - ytmsearch:%QUERY%
+    sources:
+        applemusic: false
+        deezer: false
+        flowerytts: false
+        spotify: true
+        yandexmusic: false
+    spotify:
+        albumLoadLimit: 6
+        clientId: REDACTED
+        clientSecret: REDACTED
+        countryCode: US
+        playlistLoadLimit: 6
+    yandexmusic:
+        accessToken: REDACTED
+logging:
+    file:
+        path: ./logs/
+    level:
+        lavalink: INFO
+        root: INFO
+    logback:
+        rollingPolicy:
+            maxFileSize: 1GB
+            maxHistory: 30
+    request:
+        enabled: true
+        includeClientInfo: true
+        includeHeaders: false
+        includePayload: true
+        includeQueryString: true
+        maxPayloadLength: 10000
+metrics:
+    prometheus:
+        enabled: false
+        endpoint: /metrics
+plugins:
+    youtube:
+        enabled: true
+        oauth:
+            enabled: true
+            #refreshToken: 1//0gfv8Ao_D_lXgCgYIARAAGBASNwF-L9Ir_zz1urGBaxUmM820tUjU8lygRGckoGzd5Oh5yM6kNVUVAuQSc_Ht8T-5AFwLUB9naLY
+            #skipInitialization: true
+sentry:
+    dsn: ""
+    environment: ""
+server:
+    address: 0.0.0.0
+    http2:
+        enabled: false
+    port: 6434
