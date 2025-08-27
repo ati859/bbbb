@@ -16,10 +16,5 @@
   "env": {
     "LAVALINK_HOST": "@lavalink_host",
     "LAVALINK_PASSWORD": "@lavalink_password"
-  },
-  "functions": {
-    "index.js": {
-      "maxDuration": 30
-    }
   }
 }
