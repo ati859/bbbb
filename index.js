@@ -107,11 +107,11 @@ app.use('*', (req, res) => {
     });
 });
 
-// Vercel için export
-if (process.env.VERCEL) {
-    module.exports = app;
-} else {
-    // Local development
+// Vercel için export (her zaman app'i export et)
+module.exports = app;
+
+// Local development için
+if (!process.env.VERCEL && require.main === module) {
     server.listen(PORT, () => {
         console.log('🚀 Lavalink Proxy Server');
         console.log('========================');
