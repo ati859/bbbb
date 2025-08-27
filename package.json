@@ -1,0 +1,29 @@
+{
+  "name": "lavalink-vercel-proxy",
+  "version": "1.0.0",
+  "description": "Vercel üzerinde çalışan Lavalink proxy servisi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "build": "echo 'Build completed'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "lavalink",
+    "proxy",
+    "vercel",
+    "discord",
+    "music",
+    "bot"
+  ],
+  "author": "Discord Music Bot",
+  "license": "MIT"
+}
